@@ -1,0 +1,59 @@
+﻿<Window x:Class="KalkulatorEksempel_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KalkulatorEksempel_WPF"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="430" Width="280">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!-- Tall knapper -->
+        <Button x:Name="Knapp7" Grid.Row="2" Grid.Column="0" Click="Knapp7_Click">7</Button>
+        <Button x:Name="Knapp8" Grid.Row="2" Grid.Column="1" Click="Knapp8_Click">8</Button>
+        <Button x:Name="Knapp9" Grid.Row="2" Grid.Column="2" Click="Knapp9_Click">9</Button>
+        <Button x:Name="Knapp4" Grid.Row="3" Grid.Column="0" Click="Knapp4_Click">4</Button>
+        <Button x:Name="Knapp5" Grid.Row="3" Grid.Column="1" Click="Knapp5_Click">5</Button>
+        <Button x:Name="Knapp6" Grid.Row="3" Grid.Column="2" Click="Knapp6_Click">6</Button>
+        <Button x:Name="Knapp1" Grid.Row="4" Grid.Column="0" Click="Knapp1_Click">1</Button>
+        <Button x:Name="Knapp2" Grid.Row="4" Grid.Column="1" Click="Knapp2_Click">2</Button>
+        <Button x:Name="Knapp3" Grid.Row="4" Grid.Column="2" Click="Knapp3_Click">3</Button>
+        <Button x:Name="Knapp0" Grid.Row="5" Grid.Column="1" Click="Knapp0_Click">0</Button>
+        
+        <!-- Matte funksjoner -->
+        <Button x:Name="KnappPluss" Grid.Row="1" Grid.Column="3" Click="KnappPluss_Click">+</Button>
+        <Button x:Name="KnappMinus" Grid.Row="2" Grid.Column="3" Click="KnappMinus_Click">-</Button>
+        <Button x:Name="KnappGange" Grid.Row="3" Grid.Column="3" Click="KnappGange_Click">*</Button>
+        <Button x:Name="KnappDele" Grid.Row="4" Grid.Column="3" Click="KnappDele_Click">/</Button>
+        <Button x:Name="KnappErLik" Grid.Row="5" Grid.Column="3" Click="KnappErLik_Click">=</Button>
+        
+        <!-- Clear knapper-->
+        <Button x:Name="KnappCE" Grid.Row="1" Grid.Column="0" Click="KnappCE_Click">CE</Button>
+        <Button x:Name="KnappC" Grid.Row="1" Grid.Column="1" Click="KnappC_Click">C</Button>
+        <Button x:Name="KnappTilbake" Grid.Row="1" Grid.Column="2" Content="DEL" Click="KnappTilbake_Click"></Button>
+        
+        <!-- Positiv / negativ knapp -->
+        <Button x:Name="KnappPositivNegativ" Grid.Row="5" Grid.Column="0" Click="KnappPositivNegativ_Click">+-</Button>
+        
+        <!-- Vis tekstboks-->
+        <TextBox x:Name="TekstBoksen" IsReadOnly="True" TextAlignment="Right" VerticalContentAlignment="Bottom" FontSize="30" BorderThickness="0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">0</TextBox>
+        
+        
+    </Grid>
+</Window>
